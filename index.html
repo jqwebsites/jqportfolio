@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JQ | Web Developer</title>
+  <meta name="description" content="JQ | Web Developer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="progress" id="progress"></div>
+  <div class="cursor" id="cursor"></div>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a href="#home" class="logo">JQ<span>.</span></a>
+      <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
+      <nav class="links" id="links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="btn small">Hire me</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="wrap hero-inner">
+      <p class="hello">Hi, I'm</p>
+      <h1 class="name" aria-label="JQ"><span>J</span><span>Q</span></h1>
+      <p class="role">Web developer who builds <b id="typed"></b><span class="caret"></span></p>
+      <p class="lead">I make websites for commissions, personal projects, and small businesses using HTML, CSS and JavaScript.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn">See my work</a>
+        <a href="#contact" class="btn ghost">Let's talk</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>HTML &nbsp;✦&nbsp; CSS &nbsp;✦&nbsp; JavaScript &nbsp;✦&nbsp; Web Design &nbsp;✦&nbsp; Animations &nbsp;✦&nbsp; Interactive Pages &nbsp;✦&nbsp;</span>
+      <span>HTML &nbsp;✦&nbsp; CSS &nbsp;✦&nbsp; JavaScript &nbsp;✦&nbsp; Web Design &nbsp;✦&nbsp; Animations &nbsp;✦&nbsp; Interactive Pages &nbsp;✦&nbsp;</span>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="reveal">
+        <h2>I build websites that feel alive.</h2>
+      </div>
+      <div class="reveal">
+        <p>I'm JQ, a student web developer currently studying BSIT major in Web Development. I mainly work with HTML and CSS, and I'm currently learning and improving my JavaScript skills.</p>
+        <p>I enjoy building clean, simple, and responsive websites for commissions and personal projects. I'm always learning new things and working on making my websites better, faster, and easier to use.</p>
+      </div>
+    </div>
+    <div class="wrap stats">
+      <div class="stat reveal"><b data-count="1">-100</b><span>Projects built</span></div>
+      <div class="stat reveal"><b data-count="1">0</b><span>Year learning</span></div>
+      <div class="stat reveal"><b data-count="100">0</b><span>% responsive</span></div>
+      <div class="stat reveal"><b data-count="0">0</b><span>Happy clients</span></div>
+    </div>
+  </section>
+
+  <section id="skills" class="soft">
+    <div class="wrap">
+      <h2 class="reveal">What I work with</h2>
+      <div class="skills">
+        <div class="bar reveal"><div class="bar-top"><span>HTML</span><em>90%</em></div><div class="track-bar"><div class="fill" data-level="90"></div></div></div>
+        <div class="bar reveal"><div class="bar-top"><span>CSS &amp; animations</span><em>85%</em></div><div class="track-bar"><div class="fill" data-level="85"></div></div></div>
+        <div class="bar reveal"><div class="bar-top"><span>Interactive layout</span><em>80%</em></div><div class="track-bar"><div class="fill" data-level="80"></div></div></div>
+        <div class="bar reveal"><div class="bar-top"><span>JavaScript (learning)</span><em>45%</em></div><div class="track-bar"><div class="fill" data-level="45"></div></div></div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2 class="reveal">Sample projects</h2>
+      <div class="grid">
+        <article class="card reveal">
+          <div class="thumb t1"><i></i><i></i></div>
+          <h3>Coffee Shop Landing Page</h3>
+          <p>A warm, mobile-first page with a sticky menu, hover effects and an animated menu section.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span></div>
+          <a href="#" class="more">View project</a>
+        </article>
+        <article class="card reveal">
+          <div class="thumb t2"><i></i><i></i></div>
+          <h3>Fitness Tracker Dashboard</h3>
+          <p>A clean layout with animated progress rings and cards that adapt to any screen size.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          <a href="#" class="more">View project</a>
+        </article>
+        <article class="card reveal">
+          <div class="thumb t3"><i></i><i></i></div>
+          <h3>Photography Portfolio</h3>
+          <p>A full-screen gallery with smooth hover zoom and a simple, image-first layout.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span></div>
+          <a href="#" class="more">View project</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact">
+    <div class="wrap contact-inner">
+      <div class="reveal">
+        <h2>Have a project in mind?</h2>
+        <p>Tell me what you need and I'll reply within a day!</p>
+        <!-- EDIT: put your real email and links -->
+        <p class="mail"><a href="mailto:hello@example.com">placeholder@example.com</a></p>
+      </div>
+      <form class="form reveal" id="form" novalidate>
+        <label>Name<input type="text" id="fname" placeholder="Your name"></label>
+        <label>Email<input type="email" id="femail" placeholder="you@email.com"></label>
+        <label>Message<textarea id="fmsg" rows="4" placeholder="Tell me about your project"></textarea></label>
+        <p class="msg" id="formMsg" role="status"></p>
+        <button type="submit" class="btn white">Send message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap"><p>© <span id="year"></span> JQ. Designed and built by hand with HTML, CSS and JavaScript.</p></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
