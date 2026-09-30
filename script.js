@@ -79,7 +79,7 @@ window.addEventListener('mousemove', (e) => {
   cursor.style.left = e.clientX + 'px';
   cursor.style.top = e.clientY + 'px';
 });
-document.querySelectorAll('a, button, .card, .chips span').forEach((el) => {
+document.querySelectorAll('a:not(.secret), button, .card, .chips span').forEach((el) => {
   el.addEventListener('mouseenter', () => cursor.classList.add('grow'));
   el.addEventListener('mouseleave', () => cursor.classList.remove('grow'));
 });
@@ -129,9 +129,11 @@ form.addEventListener('submit', (e) => {
   if (!emailOk) { fields[1].classList.add('invalid'); formMsg.textContent = 'Please enter a valid email.'; return; }
   if (fields[2].value.trim().length < 10) { fields[2].classList.add('invalid'); formMsg.textContent = 'Please write a longer message.'; return; }
 
-  formMsg.textContent = 'Thanks! Your message is ready to send.';
-  form.reset();
+MessageStore.add({ name: fields[0].value.trim(), email: fields[1].value.trim(), message: fields[2].value.trim() });
+formMsg.textContent = 'Thank you! Your message was sent. I will reply soon.';
+form.reset();
 });
 
 /* 9. FOOTER YEAR ---------------------------------------------- */
 document.getElementById('year').textContent = new Date().getFullYear();
+
