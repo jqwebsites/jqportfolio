@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin | JQ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- ============ LOGIN ============ -->
+  <section class="login" id="login">
+    <form class="login-card" id="loginForm">
+      <div class="logo">JQ<span>.</span></div>
+      <h1>Admin panel</h1>
+      <p>Enter your password to see your messages.</p>
+      <input type="password" id="pass" placeholder="Password" autocomplete="current-password">
+      <p class="error" id="loginError" role="alert"></p>
+      <button class="btn" type="submit">Log in</button>
+      <a href="index.html" class="back">← Back to website</a>
+    </form>
+  </section>
+
+  <!-- ============ DASHBOARD ============ -->
+  <div class="app" id="app" hidden>
+    <header class="top">
+      <div class="logo">JQ<span>.</span> <small>Admin</small></div>
+      <div class="top-btns">
+        <a href="index.html" class="btn ghost small">View site</a>
+        <button class="btn small" id="logout">Log out</button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="stats">
+        <div class="stat"><b id="sTotal">0</b><span>Total messages</span></div>
+        <div class="stat"><b id="sUnread">0</b><span>Unread</span></div>
+        <div class="stat"><b id="sToday">0</b><span>Today</span></div>
+      </div>
+
+      <div class="toolbar">
+        <input type="search" id="search" placeholder="Search name, email or message...">
+        <div class="tabs">
+          <button class="tab active" data-filter="all">All</button>
+          <button class="tab" data-filter="unread">Unread</button>
+        </div>
+      </div>
+
+      <div class="list" id="list"></div>
+
+      <div class="footer-tools">
+        <button class="btn ghost small" id="exportBtn">Download CSV</button>
+        <button class="btn ghost small" id="testBtn">Add test message</button>
+        <button class="btn ghost small danger" id="clearBtn">Delete all</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="storage.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
