@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin | JQ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiNlMTA2MDAiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjMwIiBsZXR0ZXItc3BhY2luZz0iLTIiIGZpbGw9IiNmZmZmZmYiPkpRPC90ZXh0Pgo8L3N2Zz4=">
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+</head>
+<body>
 
+  <!-- ============ LOGIN ============ -->
+  <section class="login" id="login">
+    <form class="login-card" id="loginForm">
+      <div class="logo">JQ<span>.</span></div>
+      <h1>Admin panel</h1>
+      <p>Enter your password to see your messages.</p>
+      <input type="password" id="pass" placeholder="Password" autocomplete="current-password">
+      <p class="error" id="loginError" role="alert"></p>
+      <button class="btn" type="submit">Log in</button>
+      <a href="index.html" class="back">← Back to website</a>
+    </form>
+  </section>
+
+  <!-- ============ DASHBOARD ============ -->
+  <div class="app" id="app" hidden>
+    <header class="top">
+      <div class="logo">JQ<span>.</span> <small>Admin</small></div>
+      <div class="top-btns">
+        <a href="index.html" class="btn ghost small">View site</a>
+        <button class="btn small" id="logout">Log out</button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="stats">
+        <div class="stat"><b id="sTotal">0</b><span>Total messages</span></div>
+        <div class="stat"><b id="sUnread">0</b><span>Unread</span></div>
+        <div class="stat"><b id="sToday">0</b><span>Today</span></div>
+      </div>
+
+      <div class="toolbar">
+        <input type="search" id="search" placeholder="Search name, email or message...">
+        <div class="tabs">
+          <button class="tab active" data-filter="all">All</button>
+          <button class="tab" data-filter="unread">Unread</button>
+        </div>
+      </div>
+
+      <div class="list" id="list"></div>
+
+      <div class="footer-tools">
+        <button class="btn ghost small" id="exportBtn">Download CSV</button>
+        <button class="btn ghost small" id="testBtn">Add test message</button>
+        <button class="btn ghost small danger" id="clearBtn">Delete all</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="storage.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
